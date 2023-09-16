@@ -18,6 +18,9 @@ code {
   width: 100%;
   cursor: pointer;
 }
+.favButton:active{
+  color: gold;
+}
 
 h1{
   text-align: center;
@@ -29,6 +32,12 @@ nav{
   justify-content: flex-start;
   padding: 1rem;
 }
+nav button{
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgb(148, 198, 233);
+  border: solid rgb(3, 117, 155) 0.1px;;
+}
 
 a{
   color: #000;
@@ -37,12 +46,13 @@ a{
   cursor: pointer;
 }
 a:hover{
-  color: rgb(136, 136, 136);
+  color: rgb(32, 146, 127);
+  
 } 
 
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   text-align: center;
   padding: 2rem;
   position: relative;
@@ -55,6 +65,7 @@ footer {
 footer > img{
   width: 200px;
   margin: 0;
+  margin-left: 2%;
 }
 footer > p{
   margin: 0;
@@ -72,16 +83,24 @@ form{
 
 .card{
   display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: center;
-  width: 200px;
+  align-items: start;
+  width: 100%;
+  flex-wrap: wrap;
   padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
+ 
+  
 }
-
-.card:hover{
-  border: 0.5px solid rgb(206, 217, 142);
+.cadaCard{
+  width: 20%;
+  margin-bottom: 60px;
+  margin-left: 10%;
+  margin-right: 5px;
+  border-radius: 20px;
+  flex-wrap: wrap;
+  /*border: #000 solid 1px;*/
+}
+.cadaCard:hover{
+  background-color:rgb(148, 198, 233) ;
 }
 
 .card-grid{
@@ -119,4 +138,61 @@ tr:nth-child(even) {
 }
 .dark > a {
   color: white;
+}
+img{
+  width: 60%;
+  
+}
+.doc{
+  display: flex;
+  justify-content: center;
+}
+button{
+  border-radius: 20px;
+  
+}
+button:hover{
+  color: rgb(3, 117, 155);
+  background-color:white;
+  border-bottom: solid rgb(3, 117, 155) 0.1px;
+}
+.form-contact{
+  background-color: rgb(68, 162, 194);
+  border-radius: 14px;
+  padding: 5px;
+ }
+.form-contact div input{
+  border-radius: 6px;
+
+}
+.form-button{
+  display: flex;
+  justify-content: end;
+}
+.form-button button{
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.contact{
+  margin-left: 5%;
+  margin-top: 5%;
+  margin-bottom: 20%;
+}
+.detail{
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+.fav-vacio{
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 20%;
+}
+.redes{
+  margin-right: 5%;
+}
+.redes img{
+  width: 40px;
+  height: auto;
+  margin-right: 6px;
 }

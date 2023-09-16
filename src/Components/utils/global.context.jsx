@@ -1,15 +1,38 @@
-import { createContext } from "react";
+import { createContext, useEffect, useState} from "react";
 
-export const initialState = {theme: "", data: []}
+export const themes = {
+  claro:{
+      font: 'black',
+      background: 'white'
+  },
+  oscuro:{
+      font: 'white',
+      background: '#4B4B4B'
+    }
+  }
+  
+  export const ContextProvider=({children})=>{
+  const url= "https://jsonplaceholder.typicode.com/users"
+  const [dentistas,setDentistas]=useState([])
 
-export const ContextGlobal = createContext(undefined);
+  useEffect(()=>{
+    fetch(url)
+    .then(response =>{
+      return response.json();
+    })
+    .then(data =>{
+      setDentistas(data)
+    })
+  },[])
 
-export const ContextProvider = ({ children }) => {
-  //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
-
-  return (
-    <ContextGlobal.Provider value={{}}>
+  return(
+    <ContextGlobal.Provider value={{dentistas}}>
       {children}
     </ContextGlobal.Provider>
-  );
-};
+  )
+  
+
+}
+
+export const ContextGlobal = createContext(themes.claro);
+
